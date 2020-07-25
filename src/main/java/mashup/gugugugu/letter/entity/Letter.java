@@ -1,4 +1,4 @@
 package mashup.gugugugu.letter.entity;
 
-public class Letter {
+public class Letter{
 }
