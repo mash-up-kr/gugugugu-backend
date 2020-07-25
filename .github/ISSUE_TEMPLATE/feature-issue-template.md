@@ -1,3 +1,12 @@
+---
+name: Feature issue template
+about: Describe Tasks not related to user story
+title: ''
+labels: ''
+assignees: ''
+
+---
+
 # `<Issue Title>`
 
 > FIXME: Describe the task in free format
