@@ -2,17 +2,18 @@ package mashup.gugugugu.user.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import mashup.gugugugu.user.dto.SignInRequestDto;
+import lombok.Setter;
 import mashup.gugugugu.user.dto.SignUpRequestDto;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter
 @NoArgsConstructor
+@Setter
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
     private String tokenId;
     private String name;

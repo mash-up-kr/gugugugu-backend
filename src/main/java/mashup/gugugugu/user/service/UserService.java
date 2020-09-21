@@ -2,7 +2,6 @@ package mashup.gugugugu.user.service;
 
 import mashup.gugugugu.exception.BaseException;
 import mashup.gugugugu.exception.ErrorModel;
-import mashup.gugugugu.user.dto.SignInRequestDto;
 import mashup.gugugugu.user.dto.SignUpRequestDto;
 import mashup.gugugugu.user.entity.User;
 import mashup.gugugugu.user.repository.UserRepository;

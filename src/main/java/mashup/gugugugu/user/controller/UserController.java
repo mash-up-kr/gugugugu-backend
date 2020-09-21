@@ -24,7 +24,8 @@ public class UserController {
     @PostMapping("/sign-up")
     public ResponseEntity signUp(@RequestBody SignUpRequestDto requestBody){
         userService.signUp(requestBody);
-        return ResponseEntity.status(HttpStatus.OK).build();
+
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
     @PostMapping("/sign-in")
