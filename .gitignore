@@ -42,8 +42,3 @@ out/
 ### macOS ###
 # General
 .DS_Store
-
-
-aws.yml
-travis.yml
-jwt.yml
