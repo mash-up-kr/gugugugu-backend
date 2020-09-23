@@ -1,1 +1,55 @@
+spring:
+  profiles:
+    active: dev
+
+---
+
+spring:
+  profiles: dev
+  h2:
+    console:
+      enabled: true
+
+jwt.secret-key: GuguguguSecretKey
+
+---
+
+spring:
+  profiles: prod
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      #hibernate.format_sql: true
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL55Dialect
+
+#  datasource:
+#    url: jdbc:mysql://${url}:3306/pixtus?serverTimezone=Asia/Seoul&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#    username: ${username}
+#    password: ${password}
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+  spring:
+    h2:
+      console:
+        enabled: true
+
+logging.level.org.hibernate.type.descriptor.sql: trace
+
+jwt.secret-key: ${secret-key}
+
+---
 
